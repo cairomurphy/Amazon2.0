@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Calc = 20 / 5;
+}
+
+@model BooksViewModel
+
+<h1>Amazon Bookstore 2.0</h1>
+
+@foreach (Book b in Model.Books)
+{
+    <h3>@b.Title</h3>
+
+    <ul>
+        <li>Book Category: @b.Category</li>
+        <li>Author: @b.Author</li>
+        <li>Publisher: @b.Publisher</li>
+        <li>Price: @b.Price</li>
+        <li>Isbn: @b.Isbn</li>
+        <li>Classification: @b.Classification</li>
+    </ul>
+    <br />
+} 
+
+<div page-model="@Model.PageInfo" page-action="Index"></div>
